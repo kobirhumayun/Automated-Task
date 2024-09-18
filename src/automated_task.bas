@@ -617,7 +617,7 @@ Sub MailSubInteriorColor()
 
             cell.Interior.Color = RGB(255, 192, 0)
             
-        ElseIf Application.Run("utility_functions.isStrPatternExist", cell.Value, "(file: ud)|(file: exp)|(file: ip)", True, True, True) Then
+        ElseIf Application.Run("utility_functions.isStrPatternExist", cell.Value, "(file: ud)|(file:.+ip)|(file:.+exp)", True, True, True) Then
 
             cell.Interior.Color = RGB(255, 255, 0)
             
