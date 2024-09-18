@@ -105,3 +105,28 @@ Private Function setResultSheetTemplate()
     
     
 End Function
+
+
+Private Function isStrPatternExist(str As Variant, pattern As Variant, isGlobal As Boolean, isIgnoreCase As Boolean, isMultiLine As Boolean) As Boolean
+
+    Dim regEx As Object
+
+    ' Convert the str to a string
+    str = CStr(str)
+
+    ' Convert the pattern to a string
+    pattern = CStr(pattern)
+
+    ' Create a RegExp object
+    Set regEx = CreateObject("VBScript.RegExp")
+    With regEx
+        .Global = isGlobal
+        .IgnoreCase = isIgnoreCase
+        .MultiLine = isMultiLine
+        .pattern = pattern
+    End With
+
+    ' Return the test result
+    isStrPatternExist = regEx.test(str)
+
+End Function
