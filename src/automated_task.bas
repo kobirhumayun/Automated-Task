@@ -606,6 +606,7 @@ Sub MailSubInteriorColor()
     Dim currentRegion As Range
 
     Set currentRegion = Range("a1").currentRegion
+    currentRegion.Columns.AutoFit
 
     For Each cell In currentRegion
 
