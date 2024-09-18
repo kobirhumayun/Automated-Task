@@ -27,6 +27,7 @@ Sub openUpIssuingDraft()
     Workbooks.Open ("D:\Temp\UP Draft\Draft 2024\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx")
     
 End Sub
+
 Sub MergeExcelFiles()
     Dim fnameList, fnameCurFile As Variant
     Dim countFiles, countSheets As Integer
@@ -599,3 +600,33 @@ Sub totalReceivedLc()
 
 End Sub
 
+Sub MailSubInteriorColor()
+
+    Dim cell As Range
+    Dim currentRegion As Range
+
+    Set currentRegion = Range("a1").currentRegion
+
+    For Each cell In currentRegion
+
+        If Application.Run("utility_functions.isStrPatternExist", cell.Value, "(file: lc)|(file: sc)", True, True, True) Then
+
+            cell.Interior.Color = RGB(0, 176, 240)
+            
+        ElseIf Application.Run("utility_functions.isStrPatternExist", cell.Value, "file: pdl", True, True, True) Then
+
+            cell.Interior.Color = RGB(255, 192, 0)
+            
+        ElseIf Application.Run("utility_functions.isStrPatternExist", cell.Value, "file: ud", True, True, True) Then
+
+            cell.Interior.Color = RGB(255, 255, 0)
+            
+        ElseIf Application.Run("utility_functions.isStrPatternExist", cell.Value, "end", True, True, True) Then
+
+            cell.Interior.Color = RGB(0, 176, 80)
+            
+        End If
+        
+    Next cell
+    
+End Sub
