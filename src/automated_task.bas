@@ -22,6 +22,18 @@ Sub beforeUpCheck()
 
 End Sub
 
+Sub updateShareDrive()
+
+    Dim cmdCommand As String
+    cmdCommand = "net use X: \\10.200.201.99\PDL_Customs /USER:BADSHAGROUP\Humayun 1234 /PERSISTENT:YES /p:yes"
+    Shell cmdCommand, vbNormalFocus 'unlock share drive
+
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2024\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx", _
+    "X:\PDL_Customs_Common_Share\UP Issuing Status", True 'replace UP issuing status in share folder
+    
+
+End Sub
+
 Sub openUpIssuingDraft()
 
     Workbooks.Open ("D:\Temp\UP Draft\Draft 2024\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx")
