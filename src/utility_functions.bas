@@ -130,3 +130,12 @@ Private Function isStrPatternExist(str As Variant, pattern As Variant, isGlobal 
     isStrPatternExist = regEx.test(str)
 
 End Function
+
+Private Function FolderExists(folderPath As String) As Boolean
+
+    Dim fso As Object
+    Set fso = CreateObject("Scripting.FileSystemObject")
+    
+    FolderExists = fso.FolderExists(folderPath)
+        
+End Function
