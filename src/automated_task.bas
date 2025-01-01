@@ -15,10 +15,10 @@ End Sub
 
 Sub beforeUpCheck()
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2024-2025\UP Issuing Status # 2024-2025\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx", _
-    "D:\Temp\UP Draft\Draft 2024", True 'replace UP issuing status in draft folder
+    "D:\Temp\UP Draft\Draft 2025", True 'replace UP issuing status in draft folder
     
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2024-2025\Import # 2024-2025\Import Performance\Import Performance Statement of PDL-2024-2025.xlsx", _
-    "D:\Temp\UP Draft\Draft 2024", True 'replace import performance in draft folder
+    "D:\Temp\UP Draft\Draft 2025", True 'replace import performance in draft folder
 
 End Sub
 
@@ -34,17 +34,17 @@ Sub updateShareDrive()
 
     End If
 
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2024\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2025\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx", _
     "X:\PDL_Customs_Common_Share\UP Issuing Status", True 'replace UP issuing status in share folder
 
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2024\Import Performance Statement of PDL-2024-2025 for Bond Audit.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2025\Import Performance Statement of PDL-2024-2025 for Bond Audit.xlsx", _
     "X:\PDL_Customs_Common_Share\Humayun", True 'replace UP issuing status in share folder
 
 End Sub
 
 Sub openUpIssuingDraft()
 
-    Workbooks.Open ("D:\Temp\UP Draft\Draft 2024\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx")
+    Workbooks.Open ("D:\Temp\UP Draft\Draft 2025\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx")
     
 End Sub
 
