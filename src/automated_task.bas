@@ -14,10 +14,10 @@ Sub cellNumberFormatMtr()
 End Sub
 
 Sub beforeUpCheck()
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2024-2025\UP Issuing Status # 2024-2025\UP Issuing Status for the Period # 01-03-2024 to 28-02-2025.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2025-2026\UP Issuing Status # 2025-2026\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx", _
     "D:\Temp\UP Draft\Draft 2025", True 'replace UP issuing status in draft folder
     
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2024-2025\Import # 2024-2025\Import Performance\Import Performance Statement of PDL-2024-2025.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2025-2026\Import # 2024-2025\Import Performance\Import Performance Statement of PDL-2025-2026.xlsx", _
     "D:\Temp\UP Draft\Draft 2025", True 'replace import performance in draft folder
 
 End Sub
