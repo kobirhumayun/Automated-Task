@@ -27,7 +27,7 @@ Sub updateShareDrive()
     If Not Application.Run("utility_functions.FolderExists", "X:\PDL_Customs_Common_Share") Then
 
         Dim cmdCommand As String
-        cmdCommand = "net use X: \\10.200.201.99\PDL_Customs /USER:BADSHAGROUP\Humayun 1234 /PERSISTENT:YES /p:yes"
+        cmdCommand = "net use X: \\10.200.222.50\PDL_Customs /USER:BADSHAGROUP\Humayun 1234 /PERSISTENT:YES /p:yes"
         Shell cmdCommand, vbNormalFocus 'unlock share drive
 
         Application.Wait (Time() + TimeSerial(0, 0, 3)) 'shell command take time, so delay here
@@ -35,10 +35,10 @@ Sub updateShareDrive()
     End If
 
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2025\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx", _
-    "X:\PDL_Customs_Common_Share\UP Issuing Status", True 'replace UP issuing status in share folder
+    "X:\PDL_Customs\PDL_Customs_Common_Share\UP Issuing Status", True 'replace UP issuing status in share folder
 
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2025\Import Performance Statement of PDL-2025-2026 for Bond Audit.xlsx", _
-    "X:\PDL_Customs_Common_Share\Humayun", True 'replace UP issuing status in share folder
+    "X:\PDL_Customs\PDL_Customs_Common_Share\Humayun", True 'replace UP issuing status in share folder
 
 End Sub
 
