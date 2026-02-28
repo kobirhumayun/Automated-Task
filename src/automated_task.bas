@@ -14,7 +14,7 @@ Sub cellNumberFormatMtr()
 End Sub
 
 Sub beforeUpCheck()
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2025-2026\UP Issuing Status # 2025-2026\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2026-2027\UP Issuing Status # 2026-2027\UP Issuing Status for the Period # 01-03-2026 to 28-02-2027.xlsx", _
     "D:\Temp\UP Draft\Draft 2026", True 'replace UP issuing status in draft folder
     
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2026-2027\Import # 2026-2027\Import Performance\Import Performance Statement of PDL-2026-2027.xlsx", _
@@ -34,7 +34,7 @@ Sub updateShareDrive()
 
     End If
 
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2026\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2026\UP Issuing Status for the Period # 01-03-2026 to 28-02-2027.xlsx", _
     "X:\PDL_Customs\PDL_Customs_Common_Share\UP Issuing Status", True 'replace UP issuing status in share folder
 
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "D:\Temp\UP Draft\Draft 2026\Import Performance Statement of PDL-2025-2026 for Bond Audit.xlsx", _
@@ -44,7 +44,7 @@ End Sub
 
 Sub openUpIssuingDraft()
 
-    Workbooks.Open ("D:\Temp\UP Draft\Draft 2026\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx")
+    Workbooks.Open ("D:\Temp\UP Draft\Draft 2026\UP Issuing Status for the Period # 01-03-2026 to 28-02-2027.xlsx")
     
 End Sub
 
