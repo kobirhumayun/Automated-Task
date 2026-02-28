@@ -17,7 +17,7 @@ Sub beforeUpCheck()
     Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2025-2026\UP Issuing Status # 2025-2026\UP Issuing Status for the Period # 01-03-2025 to 28-02-2026.xlsx", _
     "D:\Temp\UP Draft\Draft 2026", True 'replace UP issuing status in draft folder
     
-    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2025-2026\Import # 2025-2026\Import Performance\Import Performance Statement of PDL-2025-2026.xlsx", _
+    Application.Run "utility_functions.CopyFileToFolderUsingFSO", "G:\PDL Customs\Customs Audit 2026-2027\Import # 2026-2027\Import Performance\Import Performance Statement of PDL-2026-2027.xlsx", _
     "D:\Temp\UP Draft\Draft 2026", True 'replace import performance in draft folder
 
 End Sub
